@@ -1,0 +1,67 @@
+<!DOCTYPE html5>
+<html lang="en" import="java1.java">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade página 50</title>
+    <title>Formulários</title>
+
+    <script type="text/javascript">
+        function AssignValues()
+        {
+        localStorage.setItem("nome",document.form1.value);
+        }
+        
+        function Value1()
+        {
+        alert("O nome digitado é: " + localStorage.getItem("nome"));
+        }
+    </script>
+
+</head>
+<body>
+    <form name="form1" method="post" action="xxx">
+        <h3>Envie seu cadastro</h3>
+        <table border="2" bgcolor="grey">
+            <tr>
+                <th>Nome</th>
+                <td><input type="text" name="nome" onforminput="AssignValues()"</td>
+            </tr>
+            <tr>
+                <th>Endereço</th>
+                <td><input type="text" name="end"</td>                
+            </tr>
+            <tr>
+                <th>Sexo</th>
+                <td>
+                    Masculino:<input type="radio" name="sexo" value="masc"<br>
+                    Feminino:<input type="radio" name="sexo" value="fem"<br>
+                </td>
+            </tr>
+            <tr>
+                <th>Cidade</th>
+                <td> <select name="fonction">
+                    <option value="blu">Blumenau</option>
+                    <option value="jas">Jaraguá do Sul</option>
+                    <option value="flo">Florianópois</option>
+                    <option value="joi">Joinville</option>
+                    <option value="rio">Rio do Sul</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Comentário</th>
+                <td><textarea rows="9" name="comentário"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="SUBMIT" value="ENVIAR">
+                    <input type="RESET" value="LIMPAR">
+                    <input type="button" value="Confirmar nome" onclick="AssignValues();Value1();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

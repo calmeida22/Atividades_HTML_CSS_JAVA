@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>sessionstorage</title>
+<script type="text/javascript">
+function AssignValues()
+{
+sessionStorage.setItem("text1", document.form1.text1.value);
+}
+
+function Value1()
+{
+alert("O dado inserido foi: " + sessionStorage.getItem("text1"));
+}
+
+</script>
+</head>
+<body>
+<form name="form1">
+<input type="text" name="text1" placeholder="Enter text...">
+<br>
+
+<input type="button" value="Enviar" value= "Assign Values" onclick="AssignValues();Value1();">
+<br>
+</form>
+</body>
+</html>
