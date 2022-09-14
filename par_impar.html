@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou ímpar?</title>
+</head>
+<body>
+    <h2>Par ou Ímpar?</h2>
+    Digite um número: <input type="number" id="numero">
+    <input type="button" value="Par ou ímpar?" onclick="parimpar()">
+    <div id="res"></div>
+
+    <script>
+        function parimpar(){
+            do{
+                var num = window.document.querySelector("numero")
+                var n = Number(num.value)
+
+                for (var i=0;i<=9;i++){
+                        if (n%2===0){
+                            res.innerHTML = `${n[i]} é um número par.`;
+                        } else {
+                            res.innerHTML = `${n[i]} é um número ímpar.`;
+                        }                    
+                } 
+            } while(i!=9)
+        }
+    </script>
+
+    <h1>?? Par ou Impar?? - Contagem quantidades</h1>
+    <script>
+        var par = 0
+        var impar = 0
+        for (var i=0; i<=4; i++){
+            var num = window.prompt('Digite 05 números: ')
+            num = num % 2
+            if (num==0){
+                par++
+            } else {
+                impar++
+            }
+        }
+        window.alert(`Quantidade de pares= ${par} e quantidade de impares= ${impar}`)
+    </script>
+    
+</body>
+</html>

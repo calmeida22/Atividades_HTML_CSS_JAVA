@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    Número calcular: <input type="number" id="numero"> (número inteiro)
+    <input type="button" value="calcular" onclick="tabuada()">
+    <div id="res"></div>
+
+    <script>
+        function tabuada() {
+            var num = window.document.querySelector('input#numero')
+            var n = Number(num.value)
+            for (var i=1;i<=10;i++){
+                var item = window.document.createElement('option')
+                item.text = `${n} x ${i} = ${n*i}`
+                res.appendChild(item)
+            }
+        }
+    </script>
+
+
+    <h1>TABUADA</h1>
+    Numero: <input type="number" id="txtnumero"> (número inteiro)
+    <input type="button" value="Gerar Tabuada" onclick="Tabuada()">
+    <div id="tab"></div>
+
+    <script>
+        function Tabuada(){
+            var num = window.document.querySelector('input#txtnumero')
+            var n = Number(num.value)
+            var tabuada = ' '
+            for(var i=1; i<=10; i++){
+                tabuada += `${n} x ${i} ${n*i}<br>`
+                tab.innerHTML = tabuada
+            }
+        }        
+    </script>
+
+    
+</body>
+</html>

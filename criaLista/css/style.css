@@ -1,0 +1,46 @@
+body{
+font-family: Arial;
+font-size: 12;
+text-align: center;
+}
+
+.sessao__titulo{
+    background-color: aquamarine;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.titulo1{
+    background-color: cornflowerblue;
+    font-size: 20;
+    color:white;
+}
+
+.titulo{
+    font-size: 20;
+    color: blue;
+}
+
+th,td{
+    border: 1px solid;
+    border-color: rgb(10, 10, 10);
+    margin: 2px 2px 2px 2px;
+    
+}
+
+.tabela{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(219, 215, 215); 
+    border-collapse: collapse;      
+}
+
+.tabela__cabecalho{
+    font-weight: 800;
+    font-size: 16;
+    background-color: grey;
+}
+
+.tabela__texto{
+    font-size: 12;
+}

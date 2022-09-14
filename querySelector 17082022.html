@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector</title>
+    <style>
+        body{
+            background-color: rgb(15, 207, 159);
+            color: black;
+            font:Verdana;
+        }
+        .sessao{
+            background-color: rgb(227, 195, 248);
+            margin: 20% 20% 20% 20%;
+            padding: 50px 50px 50px 50px;
+        }
+        .titulo{
+            text-align: center;
+            margin-top: 0%;            
+        }
+
+    </style>
+</head>
+<body>
+<!--    <h1>Atividades</h1>
+    <p>Exercício 01</p>
+    <div id="res"></div>
+    <script>
+        var primeiroNome = window.prompt('Digite seu primeiro nome: ')
+        var ultimoNome = window.prompt('Digite seu último nome: ')
+        var completo = window.document.querySelector('div#res')
+        completo.innerHTML = primeiroNome + ' ' +ultimoNome
+    </script>-->
+    
+    <section class="sessao">
+    <h1 class="titulo">Cálculo IMC</h1>
+    Peso: <input type="number" id="txtpeso"> (quilos)
+    Altura: <input type="number" id="txtaltura"> (metros)
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <div id="res"></div>
+    
+    <script>
+        function Calcular(){
+            var peso = window.document.querySelector('input#txtpeso')
+            var altura = window.document.querySelector('input#txtaltura')
+            var imc = Number(peso.value)/Number(altura.value)**2
+//            res.innerHTML = imc
+
+            if (imc<=18.5){
+                res.innerHTML = imc.toFixed(2) + '<br>Você está abaixo do peso normal.'
+                window.alert('IMC = '+imc.toFixed(2)+'. Você está abaixo do peso normal.')
+            } else if (imc<25){
+                res.innerHTML = imc.toFixed(2) + '<br>Você está com peso normal.'
+                window.alert('IMC = '+imc.toFixed(2)+'. Você está com peso normal.')
+            } else if (imc<30){
+                res.innerHTML = imc.toFixed(2) + '<br>Você está com excesso de peso.'
+                window.alert('IMC = '+imc.toFixed(2)+'. Você está com excesso de peso.')
+            } else {
+                res.innerHTML = imc.toFixed(2) + '<br>Você está com obesidade.'
+                window.alert('IMC = '+imc.toFixed(2)+'. Você está com obesidade.')
+            }
+        }
+    </script>
+    </section>
+</body> 
+</html>
